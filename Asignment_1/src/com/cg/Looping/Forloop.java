@@ -8,9 +8,9 @@ public class Forloop {
 		public static void main(String[] args) {
 			Scanner s =new Scanner(System.in);
 			System.out.println("Enter a no.");
-			int a=s.nextInt();
+			double a=s.nextDouble();
 			
-			for(int i=1;i<=a;i++)
+			for(double i=1;i<=a;i++)
 			{
 				System.out.println(i);
 			}
