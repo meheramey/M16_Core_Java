@@ -1,20 +1,23 @@
+
 package com.cg.framework;
 
 public abstract class CurrentAcc extends BankAcc {
-	private final float MINBAL;
-	public CurrentAcc(int accNo, String accNm, float accBal,float MINBAL) 
+	private final float creditLimit;
+	public CurrentAcc(int accNo, String accNm, float accBal,float creditLimit) 
 	{
 		super(accNo, accNm, accBal);
-		this.MINBAL=MINBAL;
+		this.creditLimit=creditLimit;
 		
 	}
 	public void withdraw(float accBal)
 	{
 		System.out.println("Account no is "+this.getAccNo()+" Account name is: "
-				+this.getAccNm()+" "+"Balance is : "+(accBal+MINBAL));
+				+this.getAccNm()+" "+"Balance is : "+(accBal+creditLimit));
 	}
 	@Override
 	public String toString() {
-		return String.format("CurrentAcc [MINBAL=%s, toString()=%s]", MINBAL, super.toString());
+		return String.format("CurrentAcc [MINBAL=%s, toString()=%s]", creditLimit, super.toString());
 	}
+	
+
 }
